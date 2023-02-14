@@ -1,0 +1,15 @@
+:root {
+    --bs-primary: #9ebb98;
+    --bs-primary-rgb: 158, 187, 152;
+    --bs-primary-dark: #596a56;
+    --bs-primary-dark-rgb: 89, 106, 86;
+}
+
+header img{
+    object-fit: cover;
+}
+
+h1, .social-link {
+    text-shadow: 0 0 5px var(--bs-primary);
+    background-color: rgba(var(--bs-primary-dark-rgb), .5);
+}
