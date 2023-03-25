@@ -5,11 +5,23 @@
     --bs-primary-dark-rgb: 89, 106, 86;
 }
 
-header img{
+.ratio img{
     object-fit: cover;
 }
 
-h1, .social-link {
+h1, #about-text, .social-link {
     text-shadow: 0 0 5px var(--bs-primary);
     background-color: rgba(var(--bs-primary-dark-rgb), .5);
+}
+
+.ratio-20x7 {
+    --bs-aspect-ratio: 35%;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+iframe #es-header {
+    display: none;
 }
