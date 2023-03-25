@@ -4,6 +4,7 @@
     <body class="bg-primary pt-4">
         <script>
             const html = document.documentElement;
+            const languageCode = html.getAttribute('lang');
             fetch('../html/head.html')
                 .then(function(headResponse) {
                     return headResponse.text();
@@ -24,7 +25,6 @@
                         });
                 })
                 .then(function() {
-                    const languageCode = html.getAttribute('lang');
                     fetch('../lang/' + languageCode + '.json')
                         .then(function(literalsResponse) {
                             return literalsResponse.text();
@@ -48,6 +48,11 @@
                                 }
                             });
                             html.setAttribute('data-country-code', literals['country-code']);
+                            document.querySelector('#language-selection').addEventListener('change', function() {
+                                if (languageCode != this.value) {
+                                    location = '../' + this.value;
+                                }
+                            });
                         })
                         .catch((error) => {
                             console.log(error);
