@@ -14,14 +14,24 @@ h1, #about-text, .social-link {
     background-color: rgba(var(--bs-primary-dark-rgb), .5);
 }
 
-.ratio-20x7 {
-    --bs-aspect-ratio: 35%;
-}
-
 p:last-child {
     margin-bottom: 0;
 }
 
 iframe #es-header {
     display: none;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+@media (min-width: 992px) {
+    .ratio-20x7 {
+        --bs-aspect-ratio: 35%;
+    }
+
+    .min-vh-50 {
+        min-height: none;
+    }
 }

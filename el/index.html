@@ -53,6 +53,9 @@
                                     location = '../' + this.value;
                                 }
                             });
+                            const bsScript = document.createElement('script');
+                            bsScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"';
+                            document.body.insertAdjacentElement('beforeend', bsScript);
                         })
                         .catch((error) => {
                             console.log(error);
