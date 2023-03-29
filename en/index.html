@@ -40,6 +40,9 @@
                                 else if (literalKey.includes('html')) {
                                     element.innerHTML = literals[literalKey.slice(5)];
                                 }
+                                else if (literalKey.includes('meta')) {
+                                    element.setAttribute('content', literals[literalKey.slice(5)]);
+                                }
                                 else {
                                     element.textContent = literals[literalKey];
                                     if ((literalKey.includes('language')) && (element.value == languageCode)) {
